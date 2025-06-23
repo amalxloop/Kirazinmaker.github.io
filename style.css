@@ -10,8 +10,9 @@ body {
   font-family: var(--font);
   background-color: var(--bg);
   color: var(--text);
-  transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease, background-color 0.5s;
   opacity: 1;
+  overflow-x: hidden;
 }
 
 body.fade-out {
@@ -19,9 +20,11 @@ body.fade-out {
 }
 
 .terminal-header {
-  background-color: #0f0f0f;
+  background-color: rgba(15, 15, 15, 0.85);
   padding: 2rem;
   font-size: 1.2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .prompt {
@@ -29,9 +32,8 @@ body.fade-out {
   font-weight: bold;
 }
 
-.output {
-  margin-top: 0.5rem;
-  color: #f1f1f1;
+#typed-text {
+  color: var(--text);
 }
 
 nav {
@@ -39,8 +41,11 @@ nav {
   justify-content: center;
   gap: 1.5rem;
   padding: 1rem;
-  background: #121212;
+  background: rgba(18, 18, 18, 0.85);
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 nav a {
@@ -61,6 +66,8 @@ section {
   padding: 2rem;
   max-width: 900px;
   margin: auto;
+  z-index: 2;
+  position: relative;
 }
 
 h2 {
@@ -72,6 +79,8 @@ footer {
   padding: 2rem;
   font-size: 0.9rem;
   color: #aaa;
+  z-index: 2;
+  position: relative;
 }
 
 a {
@@ -117,4 +126,31 @@ body.dark-mode .prompt,
 body.dark-mode .output,
 body.dark-mode a {
   color: var(--accent);
+}
+
+/* 🔥 Animated Background Glow */
+.bg-animated {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 200%;
+  width: 200%;
+  background: radial-gradient(circle at 50% 50%, #00ffe166, transparent 70%);
+  animation: pulse 8s infinite;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
 }
