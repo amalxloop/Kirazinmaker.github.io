@@ -31,6 +31,33 @@ body {
   line-height: 1.6;
   scroll-behavior: smooth;
   transition: background 0.4s ease, color 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(-45deg, #00ffe1, #001f3f, #0f0f0f, #007c91);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header {
@@ -61,6 +88,7 @@ nav {
   top: 0;
   z-index: 1000;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -88,12 +116,23 @@ section {
   max-width: 800px;
   margin: 0 auto;
   border-bottom: 1px solid var(--border);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
 }
 
-section h2 {
-  font-size: 2rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
+section.visible {
+  opacity: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 footer {
@@ -116,7 +155,28 @@ footer {
   box-shadow: 0 0 12px #00ffcc88;
 }
 
-a {
-  color: var(--primary);
-  transition: color 0.2s;
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+  }
+  header h1 {
+    font-size: 2.2rem;
+  }
+  section {
+    padding: 2.5rem 1.2rem;
+  }
+  .split {
+    flex-direction: column;
+    text-align: center;
+  }
 }
