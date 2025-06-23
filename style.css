@@ -1,14 +1,22 @@
-body { font-family: 'Inter', sans-serif; background-color: #0d1117; color: #c9d1d9; padding: 2rem; max-width: 900px; margin: auto; line-height: 1.6; animation: fadeInBody 1s ease-in-out; }
+body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); padding: 2rem; max-width: 900px; margin: auto; line-height: 1.6; animation: fadeInBody 1s ease-in-out; transition: background-color 0.4s ease, color 0.4s ease; }
 
-h1, h2, h3 { color: #58a6ff; }
+:root { --bg: #0d1117; --text: #c9d1d9; --link: #58a6ff; }
 
-a { color: #58a6ff; text-decoration: none; }
+[data-theme-light] { --bg: #ffffff; --text: #111111; --link: #1a73e8; }
+
+h1, h2, h3 { color: var(--link); }
+
+a { color: var(--link); text-decoration: none; }
 
 a:hover { text-decoration: underline; }
 
 ul { list-style: square; padding-left: 1.5rem; }
 
 .footer { text-align: center; font-size: 0.9rem; color: #666; margin-top: 4rem; }
+
+button#themeToggle { position: fixed; top: 20px; right: 20px; padding: 8px 12px; font-size: 14px; border: none; background: var(--link); color: white; cursor: pointer; border-radius: 4px; z-index: 999; transition: background 0.3s; }
+
+button#themeToggle:hover { opacity: 0.85; }
 
 /* Animations */ .fade-in { opacity: 0; animation: fadeIn 1s ease-in-out forwards; }
 
