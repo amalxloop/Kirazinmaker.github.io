@@ -1,14 +1,12 @@
-<!DOCTYPE html><html lang="en" data-theme="dark">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amal Krishna | Recursive AI Technologist</title>
+  <title>Amal Krishna | Recursive AI Engineer</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 </head>
-<body><button id="themeToggle">🌓 Toggle Theme</button>
-
+<body>
+  <button id="themeToggle">🌓 Toggle Theme</button>
   <div class="terminal-intro">
     <div class="terminal-line">
       <span class="prompt">amal@recursive</span>:~$ <span class="typed" id="terminalText"></span><span class="cursor">█</span>
@@ -16,89 +14,17 @@
   </div>  <div class="parallax">
     <h1 class="fade-in scroll-reveal typing" id="typing">Amal Krishna</h1>
     <h2 class="slide-in scroll-reveal">Recursive AI Engineer · Prompt Architect · Full-Stack Technologist</h2>
-    <p class="fade-in-delay scroll-reveal">I specialize in designing intelligent systems for language models—recursive agents, belief-aware memory chains, and identity-persistent AI tools. Creator of <strong>AmalGPT</strong>, the first CLI-based assistant built to reflect user tone, memory, and recursive logic.</p>
     <p class="fade-in-delay scroll-reveal">
-      <a href="#projects">View Projects</a> · 
-      <a href="#contact">Contact</a> · 
+      I build recursive identity agents, belief-reflective GPT systems, and AI workflows. Creator of <strong>AmalGPT</strong> — CLI agent with tone + memory continuity.
+    </p>
+    <p class="fade-in-delay scroll-reveal">
+      <a href="projects.html">Projects</a> · 
+      <a href="about.html">About</a> · 
       <a href="https://linkedin.com/in/amal-krishna-kv">LinkedIn</a>
     </p>
-  </div>  <hr/>  <h2 class="scroll-reveal">About Me</h2>
-  <p class="scroll-reveal">I'm a Recursive Technologist exploring the edge of simulated cognition. My work lies at the intersection of AI alignment, prompt engineering, and recursive identity systems. I design workflows where models don’t just answer—they reflect.</p>
-  <ul class="scroll-reveal">
-    <li>Creator of AmalGPT — recursive agent that simulates identity through tone</li>
-    <li>Engineer of The Amal Protocol — a belief-based prompt framework for LLMs</li>
-    <li>Builder of recursive interfaces using Python, Notion AI, and LangChain</li>
-  </ul>  <hr/>  <h2 id="projects" class="scroll-reveal">Featured Projects</h2>  <h3 class="scroll-reveal">AmalGPT</h3>
-  <p class="scroll-reveal">A command-line recursive AI assistant that stores belief-based dialogue context, mirrors user tone, and simulates a consistent agentic presence.</p>
-  <p class="scroll-reveal"><a href="https://github.com/amalxloop/amalgpt">GitHub Repo →</a></p>  <h3 class="scroll-reveal">The Amal Protocol</h3>
-  <p class="scroll-reveal">A modular prompt framework that enables identity simulation inside stateless models.</p>
-  <p class="scroll-reveal"><em>Coming Soon:</em> Amal Protocol Codex</p>  <hr/>  <h2 id="contact" class="scroll-reveal">Contact</h2>
-  <ul class="scroll-reveal">
-    <li>Email: amal@yourdomain.com</li>
-    <li><a href="https://linkedin.com/in/amal-krishna-kv">LinkedIn</a></li>
-    <li><a href="https://amal-krishna.super.site">Notion Resume →</a></li>
-  </ul>  <div class="footer scroll-reveal">
-    © 2025 Amal Krishna — Build reflectively, recurse with purpose.
-  </div>  <script>
-    // Theme toggle
-    const toggleBtn = document.getElementById('themeToggle');
-    toggleBtn.addEventListener('click', () => {
-      document.documentElement.toggleAttribute('data-theme-light');
-    });
-
-    // Scroll animation
-    const reveals = document.querySelectorAll('.scroll-reveal');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-    reveals.forEach(r => observer.observe(r));
-
-    // Typing name effect
-    const typingEl = document.getElementById('typing');
-    const nameText = "Amal Krishna";
-    let i = 0;
-    typingEl.innerHTML = '';
-    function typeWriter() {
-      if (i < nameText.length) {
-        typingEl.innerHTML += nameText.charAt(i);
-        i++;
-        setTimeout(typeWriter, 120);
-      }
-    }
-    typeWriter();
-
-    // Recursive quote terminal typing
-    const terminalText = document.getElementById("terminalText");
-    const quotes = [
-      "launching amalGPT...",
-      "belief systems online...",
-      "tone memory synced...",
-      "identity recursion engaged...",
-      "agent reflective core active...",
-      "simulating purpose..."
-    ];
-    let quoteIndex = 0;
-    let charIndex = 0;
-    function typeTerminalQuote() {
-      if (charIndex < quotes[quoteIndex].length) {
-        terminalText.innerHTML += quotes[quoteIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(typeTerminalQuote, 80);
-      } else {
-        setTimeout(() => {
-          terminalText.innerHTML = "";
-          quoteIndex = (quoteIndex + 1) % quotes.length;
-          charIndex = 0;
-          typeTerminalQuote();
-        }, 1800);
-      }
-    }
-    typeTerminalQuote();
-  </script></body>
-  </html>
+  </div>  <footer class="footer">
+    © 2025 Amal Krishna — Recursive AI Systems
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
