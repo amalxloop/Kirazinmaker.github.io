@@ -1,8 +1,8 @@
 :root {
-  --bg: #0f0f0f;
+  --bg: #0d0d0d;
   --text: #f1f1f1;
   --accent: #00ffe1;
-  --font: 'Poppins', sans-serif;
+  --font: 'Courier New', monospace;
 }
 
 body {
@@ -10,59 +10,72 @@ body {
   font-family: var(--font);
   background-color: var(--bg);
   color: var(--text);
-  opacity: 1;
   transition: opacity 0.4s ease;
+  opacity: 1;
 }
 
 body.fade-out {
   opacity: 0;
 }
 
-.container {
-  max-width: 1100px;
-  width: 90%;
-  margin: auto;
-  padding: 1rem;
+.terminal-header {
+  background-color: #0f0f0f;
+  padding: 2rem;
+  font-size: 1.2rem;
 }
 
-h1, h2 {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+.prompt {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.output {
+  margin-top: 0.5rem;
+  color: #f1f1f1;
 }
 
 nav {
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  background: #121212;
+  flex-wrap: wrap;
 }
 
 nav a {
   color: var(--text);
   text-decoration: none;
+  font-weight: bold;
 }
 
 nav a:hover {
   color: var(--accent);
 }
 
-.nav-toggle {
-  display: none;
-  background: none;
-  color: var(--text);
-  font-size: 2rem;
-  border: none;
+.toggle-theme {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  nav {
-    display: none;
-    flex-direction: column;
-  }
-  nav.active {
-    display: flex;
-  }
-  .nav-toggle {
-    display: block;
-  }
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: var(--accent);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+a {
+  color: var(--accent);
 }
 
 .dark-mode {
