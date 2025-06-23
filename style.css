@@ -1,6 +1,21 @@
-/* Responsive Utilities */
-* {
-  box-sizing: border-box;
+:root {
+  --bg: #0f0f0f;
+  --text: #f1f1f1;
+  --accent: #00ffe1;
+  --font: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text);
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+body.fade-out {
+  opacity: 0;
 }
 
 .container {
@@ -10,20 +25,24 @@
   padding: 1rem;
 }
 
-/* Responsive Typography */
 h1, h2 {
   font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 
-/* Nav Styles */
-.nav {
+nav {
   display: flex;
   gap: 1rem;
 }
-.nav a {
+
+nav a {
   color: var(--text);
   text-decoration: none;
 }
+
+nav a:hover {
+  color: var(--accent);
+}
+
 .nav-toggle {
   display: none;
   background: none;
@@ -33,16 +52,21 @@ h1, h2 {
   cursor: pointer;
 }
 
-/* Responsive Nav for Mobile */
 @media (max-width: 768px) {
-  .nav {
+  nav {
     display: none;
     flex-direction: column;
   }
-  .nav.active {
+  nav.active {
     display: flex;
   }
   .nav-toggle {
     display: block;
   }
+}
+
+.dark-mode {
+  --bg: #ffffff;
+  --text: #111111;
+  --accent: #007aff;
 }
