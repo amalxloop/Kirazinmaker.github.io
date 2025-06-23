@@ -1,4 +1,15 @@
 /* style.css */
+
+/* Add to style.css */
+
+body {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}
 :root {
   --bg: #0f0f0f;
   --text: #f1f1f1;
