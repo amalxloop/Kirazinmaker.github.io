@@ -37,7 +37,7 @@ body.fade-out {
 nav {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 1rem;
   background: #121212;
   flex-wrap: wrap;
@@ -78,8 +78,43 @@ a {
   color: var(--accent);
 }
 
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.split img {
+  max-width: 200px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+}
+
+pre {
+  background: #111;
+  padding: 1rem;
+  color: var(--accent);
+  overflow-x: auto;
+}
+
 .dark-mode {
   --bg: #ffffff;
   --text: #111111;
   --accent: #007aff;
+}
+
+body.dark-mode .terminal-header,
+body.dark-mode nav,
+body.dark-mode footer,
+body.dark-mode pre {
+  background-color: #f4f4f4;
+  color: var(--text);
+}
+
+body.dark-mode .prompt,
+body.dark-mode .output,
+body.dark-mode a {
+  color: var(--accent);
 }
