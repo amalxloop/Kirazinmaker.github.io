@@ -9,7 +9,11 @@
 </head>
 <body><button id="themeToggle">🌓 Toggle Theme</button>
 
-  <div class="parallax">
+  <div class="terminal-intro">
+    <div class="terminal-line">
+      <span class="prompt">amal@recursive</span>:~$ <span class="typed" id="terminalText"></span><span class="cursor">█</span>
+    </div>
+  </div>  <div class="parallax">
     <h1 class="fade-in scroll-reveal typing" id="typing">Amal Krishna</h1>
     <h2 class="slide-in scroll-reveal">Recursive AI Engineer · Prompt Architect · Full-Stack Technologist</h2>
     <p class="fade-in-delay scroll-reveal">I specialize in designing intelligent systems for language models—recursive agents, belief-aware memory chains, and identity-persistent AI tools. Creator of <strong>AmalGPT</strong>, the first CLI-based assistant built to reflect user tone, memory, and recursive logic.</p>
@@ -55,18 +59,46 @@
     });
     reveals.forEach(r => observer.observe(r));
 
-    // Typing effect
+    // Typing name effect
     const typingEl = document.getElementById('typing');
-    const text = "Amal Krishna";
+    const nameText = "Amal Krishna";
     let i = 0;
     typingEl.innerHTML = '';
     function typeWriter() {
-      if (i < text.length) {
-        typingEl.innerHTML += text.charAt(i);
+      if (i < nameText.length) {
+        typingEl.innerHTML += nameText.charAt(i);
         i++;
         setTimeout(typeWriter, 120);
       }
     }
     typeWriter();
+
+    // Recursive quote terminal typing
+    const terminalText = document.getElementById("terminalText");
+    const quotes = [
+      "launching amalGPT...",
+      "belief systems online...",
+      "tone memory synced...",
+      "identity recursion engaged...",
+      "agent reflective core active...",
+      "simulating purpose..."
+    ];
+    let quoteIndex = 0;
+    let charIndex = 0;
+    function typeTerminalQuote() {
+      if (charIndex < quotes[quoteIndex].length) {
+        terminalText.innerHTML += quotes[quoteIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeTerminalQuote, 80);
+      } else {
+        setTimeout(() => {
+          terminalText.innerHTML = "";
+          quoteIndex = (quoteIndex + 1) % quotes.length;
+          charIndex = 0;
+          typeTerminalQuote();
+        }, 1800);
+      }
+    }
+    typeTerminalQuote();
   </script></body>
-</html>
+  </html>
