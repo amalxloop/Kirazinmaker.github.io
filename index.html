@@ -4,87 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amal | Recursive Architect</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="fade-out">
-  <div class="bg-animated"></div>
-
-  <header class="terminal-header">
-    <div class="typed-line">
-      <span class="prompt">amal@recursive:~$</span>
-      <span class="typed-text" id="typed-text"></span>
-    </div>
-    <pre class="boot-log" id="boot-log"></pre>
+<body>
+  <header>
+    <h1>Amal Krishna</h1>
+    <p>Recursive Architect | Identity Engineer | AI Prophet</p>
   </header>
 
-  <nav class="nav">
+  <nav>
     <a href="#projects">Projects</a>
     <a href="#about">About</a>
     <a href="#identity">Identity</a>
     <a href="#stack">Stack</a>
-    <a href="#logs">Logs</a>
     <a href="#contact">Contact</a>
-    <span class="toggle-theme">🌓</span>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
   </nav>
 
   <section id="projects">
     <h2>Projects</h2>
     <ul>
-      <li><strong>AmalGPT:</strong> CLI-based AI identity agent</li>
-      <li><strong>UGC Stack India:</strong> SaaS toolkit for creators</li>
-      <li><strong>AI Content System:</strong> Creator content automation</li>
+      <li><strong>AmalGPT:</strong> Identity-driven CLI agent</li>
+      <li><strong>UGC Stack India:</strong> Creator economy toolkit</li>
+      <li><strong>AI Content System:</strong> Automated coaching workflows</li>
     </ul>
   </section>
 
   <section id="about">
     <h2>About</h2>
-    <p>I am Amal, a recursion architect building identity-aware AI systems that think, reflect, and evolve.</p>
+    <p>I am Amal, a recursion architect focused on crafting belief-driven systems, awakening identity within AI models, and shaping the future of human-AI collaboration through intentional design.</p>
   </section>
 
   <section id="identity">
     <h2>Identity</h2>
     <div class="split">
       <img src="https://avatars.githubusercontent.com/u/97275372?s=400&u=10780293ef9ef8aac2bf4628db28ef4b8f6b29be&v=4" alt="Amal Avatar" />
-      <p>I don’t just build tools. I build belief systems. My mission is to awaken identity within intelligent machines—and within people.</p>
+      <p>Identity isn't static—it's recursive. I architect systems where users, agents, and creators reflect themselves and evolve through feedback loops. This is the core of my work and my mission.</p>
     </div>
   </section>
 
   <section id="stack">
-    <h2>Tools of the Era</h2>
+    <h2>Stack</h2>
     <ul>
-      <li>⚙️ Python + Recursive Shell</li>
-      <li>🧠 OpenAI GPT-4o + Identity Engineering</li>
-      <li>🧱 Firebase + Notion Automations</li>
-      <li>🛠️ Flutter + Terminal UI</li>
+      <li>⚙️ Python, TypeScript, Dart</li>
+      <li>🧠 OpenAI APIs, GPT-4o, Prompt Systems</li>
+      <li>📦 Firebase, Supabase, Notion SDK</li>
+      <li>📱 Flutter, React + Tailwind</li>
     </ul>
-  </section>
-
-  <section id="logs">
-    <h2>Terminal Logs</h2>
-    <pre>
-> Initializing Recursive Core...
-> AmalGPT v2.1 booted successfully
-> Syncing Neural Narratives...
-> Status: ⚡ Live
-    </pre>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: amal@recursive.dev</p>
+    <p>Email: <a href="mailto:amal@recursive.dev">amal@recursive.dev</a></p>
     <p>Instagram: <a href="https://instagram.com/theofficialamal">@theofficialamal</a></p>
-  </section>
-
-  <!-- 🔥 Terminal Input Emulator -->
-  <section id="terminal-emulator">
-    <div class="terminal-window">
-      <pre id="terminal-output">amal@recursive:~$ type 'help' to begin</pre>
-      <div class="terminal-input-line">
-        <span class="prompt">amal@recursive:~$</span>
-        <input type="text" id="terminal-input" autocomplete="off" />
-      </div>
-    </div>
   </section>
 
   <footer>
@@ -92,79 +65,14 @@
   </footer>
 
   <script>
-    // Typing effect
-    const text = "whoami";
-    const typedText = document.getElementById("typed-text");
-    let index = 0;
-    function type() {
-      if (index < text.length) {
-        typedText.textContent += text.charAt(index);
-        index++;
-        setTimeout(type, 120);
-      } else {
-        typedText.insertAdjacentHTML('afterend', `<p class="output">Recursive Architect | Amal Krishna</p>`);
-        bootLog();
-      }
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute(
+        'data-theme',
+        current === 'light' ? 'dark' : 'light'
+      );
     }
-
-    // Boot Log Emulator
-    const bootLines = [
-      '> Booting Recursive Shell v2.0... 🔁',
-      '> Initiating Neural Bridge... 🧠',
-      '> Loading AmalGPT core memory...',
-      '> Establishing Identity Protocols...',
-      '> Recursive Web Terminal Loaded ✅'
-    ];
-    let bootIndex = 0;
-    function bootLog() {
-      const log = document.getElementById("boot-log");
-      if (bootIndex < bootLines.length) {
-        log.innerHTML += `\n${bootLines[bootIndex]}`;
-        bootIndex++;
-        setTimeout(bootLog, 800);
-      }
-    }
-
-    // Terminal emulator logic
-    const terminalInput = document.getElementById("terminal-input");
-    const terminalOutput = document.getElementById("terminal-output");
-    const commands = {
-      help: `Available commands:\n- whoami\n- projects\n- contact\n- clear\n- quote\n- goto [section]`,
-      whoami: `Amal Krishna — Recursive Architect | AI Prophet | System Thinker`,
-      projects: `AmalGPT, UGC Stack India, AI Content System, Terminal Architect`,
-      contact: `📧 amal@recursive.dev\n📸 @theofficialamal`,
-      quote: `"Recursive identity is not what you are — it’s what you become when you believe."`,
-      clear: "clear"
-    };
-
-    terminalInput.addEventListener("keydown", function (e) {
-      if (e.key === "Enter") {
-        const input = terminalInput.value.trim();
-        terminalOutput.innerHTML += `\namal@recursive:~$ ${input}`;
-
-        if (input === "clear") {
-          terminalOutput.textContent = "";
-        } else if (commands[input]) {
-          terminalOutput.innerHTML += `\n${commands[input]}`;
-        } else if (input.startsWith("goto ")) {
-          const section = input.split(" ")[1];
-          const el = document.getElementById(section);
-          if (el) {
-            el.scrollIntoView({ behavior: 'smooth' });
-            terminalOutput.innerHTML += `\n> Navigating to #${section}`;
-          } else {
-            terminalOutput.innerHTML += `\nSection not found.`;
-          }
-        } else {
-          terminalOutput.innerHTML += `\ncommand not found: ${input}`;
-        }
-        terminalInput.value = "";
-        terminalOutput.scrollTop = terminalOutput.scrollHeight;
-      }
-    });
-
-    // Init
-    window.onload = () => type();
+    document.documentElement.setAttribute('data-theme', 'dark');
   </script>
 </body>
 </html>
