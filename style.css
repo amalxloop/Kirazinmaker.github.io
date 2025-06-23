@@ -1,3 +1,5 @@
+/* style.css */
+
 :root {
   --bg: #0c0c0c;
   --text: #f0f0f0;
@@ -118,6 +120,10 @@ section {
   border-bottom: 1px solid var(--border);
   opacity: 0;
   animation: fadeInUp 0.8s ease forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 section.visible {
@@ -147,6 +153,8 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
+  justify-content: center;
+  text-align: center;
 }
 
 .split img {
@@ -180,22 +188,3 @@ footer {
     text-align: center;
   }
 }
-
-.centered {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.animated {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.animated.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
