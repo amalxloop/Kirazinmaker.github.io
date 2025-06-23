@@ -1,50 +1,48 @@
-/* style.css */
-
-/* Add to style.css */
-
-body {
-  opacity: 1;
-  transition: opacity 0.4s ease;
+/* Responsive Utilities */
+* {
+  box-sizing: border-box;
 }
 
-body.fade-out {
-  opacity: 0;
+.container {
+  max-width: 1100px;
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
 }
-:root {
-  --bg: #0f0f0f;
-  --text: #f1f1f1;
-  --accent: #00ffe1;
-  --font: 'Poppins', sans-serif;
+
+/* Responsive Typography */
+h1, h2 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
-body {
-  margin: 0;
-  font-family: var(--font);
-  background-color: var(--bg);
-  color: var(--text);
-}
-header, footer {
-  padding: 1rem 2rem;
+
+/* Nav Styles */
+.nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 1rem;
 }
-nav a {
+.nav a {
   color: var(--text);
-  margin-left: 1rem;
   text-decoration: none;
 }
-nav a:hover {
-  color: var(--accent);
-}
-main {
-  padding: 2rem;
-}
-.dark-mode {
-  --bg: #ffffff;
-  --text: #111111;
-  --accent: #007aff;
-}
-.toggle-theme {
+.nav-toggle {
+  display: none;
+  background: none;
+  color: var(--text);
+  font-size: 2rem;
+  border: none;
   cursor: pointer;
-  font-size: 1.2rem;
+}
+
+/* Responsive Nav for Mobile */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+  }
+  .nav.active {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
 }
