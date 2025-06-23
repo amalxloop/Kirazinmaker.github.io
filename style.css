@@ -24,7 +24,7 @@ ul { list-style: square; padding-left: 1.5rem; }
 
 .footer { text-align: center; font-size: 0.9rem; color: #666; margin-top: 4rem; }
 
-button#themeToggle { position: fixed; top: 20px; right: 20px; padding: 8px 12px; font-size: 14px; border: none; background: var(--link); color: white; cursor: pointer; border-radius: 4px; z-index: 999; transition: background 0.3s; }
+button#themeToggle { position: fixed; top: 15px; right: 15px; padding: 4px 8px; font-size: 12px; border: none; background: var(--link); color: white; cursor: pointer; border-radius: 4px; z-index: 999; transition: background 0.3s; line-height: 1.2; }
 
 button#themeToggle:hover { opacity: 0.85; }
 
