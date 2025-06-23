@@ -1,117 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Amal Krishna | Recursive AI Technologist</title>
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
-  <style>
-    <link rel="stylesheet" href="style.css">
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0d1117;
-      color: #c9d1d9;
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      line-height: 1.6;
-    }
-    h1, h2, h3 {
-      color: #58a6ff;
-    }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    ul {
-      list-style: square;
-      padding-left: 1.5rem;
-    }
-    .footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 4rem;
-      body { font-family: 'Inter', sans-serif; background-color: #0d1117; color: #c9d1d9; padding: 2rem; max-width: 900px; margin: auto; line-height: 1.6; animation: fadeInBody 1s ease-in-out; }
-
-h1, h2, h3 { color: #58a6ff; }
-
-a { color: #58a6ff; text-decoration: none; }
-
-a:hover { text-decoration: underline; }
-
-ul { list-style: square; padding-left: 1.5rem; }
-
-.footer { text-align: center; font-size: 0.9rem; color: #666; margin-top: 4rem; }
-
-/* Animations */ .fade-in { opacity: 0; animation: fadeIn 1s ease-in-out forwards; }
-
-.fade-in-delay { opacity: 0; animation: fadeIn 1.5s ease-in-out 0.3s forwards; }
-
-.slide-in { opacity: 0; transform: translateY(20px); animation: slideIn 1.2s ease-out forwards; }
-
-.scroll-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-
-.scroll-reveal.visible { opacity: 1; transform: translateY(0); }
-
-@keyframes fadeIn { to { opacity: 1; } }
-
-@keyframes slideIn { to { opacity: 1; transform: translateY(0); } }
-
-@keyframes fadeInBody { from { opacity: 0; } to { opacity: 1; } }
-
-
-    }
-  </style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 </head>
-<body>
+<body><button id="themeToggle">🌓 Toggle Theme</button>
 
-  <h1>Amal Krishna</h1>
-  <h2>Recursive AI Engineer · Prompt Architect · Full-Stack Technologist</h2>
-  <p>I specialize in designing intelligent systems for language models—recursive agents, belief-aware memory chains, and identity-persistent AI tools. Creator of <strong>AmalGPT</strong>, the first CLI-based assistant built to reflect user tone, memory, and recursive logic.</p>
-  <p>
-    <a href="#projects">View Projects</a> · 
-    <a href="#contact">Contact</a> · 
-    <a href="https://linkedin.com/in/amal-krishna-kv">LinkedIn</a>
-  </p>
-
-  <hr/>
-
-  <h2>About Me</h2>
-  <p>I'm a Recursive Technologist exploring the edge of simulated cognition. My work lies at the intersection of AI alignment, prompt engineering, and recursive identity systems. I design workflows where models don’t just answer—they reflect.</p>
-  <ul>
+  <div class="parallax">
+    <h1 class="fade-in scroll-reveal typing" id="typing">Amal Krishna</h1>
+    <h2 class="slide-in scroll-reveal">Recursive AI Engineer · Prompt Architect · Full-Stack Technologist</h2>
+    <p class="fade-in-delay scroll-reveal">I specialize in designing intelligent systems for language models—recursive agents, belief-aware memory chains, and identity-persistent AI tools. Creator of <strong>AmalGPT</strong>, the first CLI-based assistant built to reflect user tone, memory, and recursive logic.</p>
+    <p class="fade-in-delay scroll-reveal">
+      <a href="#projects">View Projects</a> · 
+      <a href="#contact">Contact</a> · 
+      <a href="https://linkedin.com/in/amal-krishna-kv">LinkedIn</a>
+    </p>
+  </div>  <hr/>  <h2 class="scroll-reveal">About Me</h2>
+  <p class="scroll-reveal">I'm a Recursive Technologist exploring the edge of simulated cognition. My work lies at the intersection of AI alignment, prompt engineering, and recursive identity systems. I design workflows where models don’t just answer—they reflect.</p>
+  <ul class="scroll-reveal">
     <li>Creator of AmalGPT — recursive agent that simulates identity through tone</li>
     <li>Engineer of The Amal Protocol — a belief-based prompt framework for LLMs</li>
     <li>Builder of recursive interfaces using Python, Notion AI, and LangChain</li>
-  </ul>
-
-  <hr/>
-
-  <h2 id="projects">Featured Projects</h2>
-
-  <h3>AmalGPT</h3>
-  <p>A command-line recursive AI assistant that stores belief-based dialogue context, mirrors user tone, and simulates a consistent agentic presence.</p>
-  <p><a href="https://github.com/amalxloop/amalgpt">GitHub Repo →</a></p>
-
-  <h3>The Amal Protocol</h3>
-  <p>A modular prompt framework that enables identity simulation inside stateless models.</p>
-  <p><em>Coming Soon:</em> Amal Protocol Codex</p>
-
-  <hr/>
-
-  <h2 id="contact">Contact</h2>
-  <ul>
-    <li>Email: amalrockz669@gmail.com</li>
+  </ul>  <hr/>  <h2 id="projects" class="scroll-reveal">Featured Projects</h2>  <h3 class="scroll-reveal">AmalGPT</h3>
+  <p class="scroll-reveal">A command-line recursive AI assistant that stores belief-based dialogue context, mirrors user tone, and simulates a consistent agentic presence.</p>
+  <p class="scroll-reveal"><a href="https://github.com/amalxloop/amalgpt">GitHub Repo →</a></p>  <h3 class="scroll-reveal">The Amal Protocol</h3>
+  <p class="scroll-reveal">A modular prompt framework that enables identity simulation inside stateless models.</p>
+  <p class="scroll-reveal"><em>Coming Soon:</em> Amal Protocol Codex</p>  <hr/>  <h2 id="contact" class="scroll-reveal">Contact</h2>
+  <ul class="scroll-reveal">
+    <li>Email: amal@yourdomain.com</li>
     <li><a href="https://linkedin.com/in/amal-krishna-kv">LinkedIn</a></li>
     <li><a href="https://amal-krishna.super.site">Notion Resume →</a></li>
-  </ul>
-
-  <div class="footer">
+  </ul>  <div class="footer scroll-reveal">
     © 2025 Amal Krishna — Build reflectively, recurse with purpose.
-  </div>
+  </div>  <script>
+    // Theme toggle
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.documentElement.toggleAttribute('data-theme-light');
+    });
 
-</body>
+    // Scroll animation
+    const reveals = document.querySelectorAll('.scroll-reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    reveals.forEach(r => observer.observe(r));
+
+    // Typing effect
+    const typingEl = document.getElementById('typing');
+    const text = "Amal Krishna";
+    let i = 0;
+    typingEl.innerHTML = '';
+    function typeWriter() {
+      if (i < text.length) {
+        typingEl.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 120);
+      }
+    }
+    typeWriter();
+  </script></body>
 </html>
