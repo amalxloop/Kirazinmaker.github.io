@@ -1,76 +1,118 @@
-# By AmalxLoop
-
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amal Krishna | Recursive AI Technologist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Amal Krishna – Recursion Architect</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
+    :root {
+      --accent: #E63946;
+      --bg: #FFFFFF;
+      --text: #333;
+      --mono: 'Segoe UI', sans-serif;
+    }
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0d1117;
-      color: #c9d1d9;
-      margin: 0;
-      padding: 0 2rem;
-      max-width: 800px;
-      margin-inline: auto;
+      margin:0;
+      font:16px/1.6 var(--mono);
+      color: var(--text);
+      background: var(--bg);
     }
-    header {
-      margin-top: 4rem;
+    nav {
+      position: sticky; top:0;
+      background: var(--bg);
+      display:flex;
+      justify-content: space-between;
+      padding:1rem 2rem;
+      box-shadow:0 2px 4px rgba(0,0,0,0.05);
+      z-index:100;
+    }
+    nav a { color: var(--text); text-decoration:none; margin-left:1.5rem; }
+    .hero {
+      min-height: 80vh;
+      display: grid;
+      place-items: center;
       text-align: center;
+      background: var(--accent);
+      color: #fff;
+      padding:2rem;
     }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+    .hero h1 { font-size:3rem; margin:0 0 1rem; }
+    .hero a {
+      display:inline-block;
+      background:#fff;color:var(--accent);
+      padding:0.75rem 1.5rem;
+      border-radius:4px;
+      font-weight:bold;
+      transition:transform .2s;
     }
-    h2 {
-      color: #58a6ff;
+    .hero a:hover { transform: translateY(-3px); }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap:2rem;
+      padding:4rem 2rem;
+      max-width:1200px;
+      margin: auto;
     }
-    section {
-      margin-top: 3rem;
+    .card {
+      background:#fff;
+      border:1px solid #eee;
+      border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.05);
+      overflow:hidden;
+      transition:transform .2s, box-shadow .2s;
     }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
     }
-    a:hover {
-      text-decoration: underline;
+    .card img {
+      width:100%;
+      height: 180px;
+      object-fit:cover;
     }
-    code {
-      background: #161b22;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
+    .card-content {
+      padding:1.25rem;
     }
+    .card-content h3 { margin:0 0 .5rem; }
+    .card-content p { margin:0; color:#666; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Amal Krishna</h1>
-    <h2>Recursive AI Technologist • Prompt Engineer • Systems Architect</h2>
-    <p>I specialize in building recursive agent frameworks, belief-aware GPT systems, and identity-persistent AI tools. Creator of <strong>AmalGPT</strong> — a CLI-based recursive assistant designed to simulate continuity and reflection in LLMs.</p>
-    <p>🌀 Let’s reshape how intelligence reflects.</p>
-    <p>
-      <a href="#projects">Projects</a> · 
-      <a href="https://linkedin.com/in/amal-krishna-kv">LinkedIn</a> · 
-      <a href="https://github.com/amalxloop">GitHub</a>
-    </p>
-  </header>  <section id="projects">
-    <h2>🔧 Projects</h2><h3>AmalGPT</h3>
-<p>A CLI-based recursive AI assistant that reflects tone and simulates continuity using belief-based memory prompts.</p>
-<ul>
-  <li>Language: Python</li>
-  <li>API: OpenAI (gpt-3.5/gpt-4)</li>
-  <li>Features: Identity-aware prompt loop, reflection, tone echo, memory cap</li>
-</ul>
-<p><a href="https://github.com/amalxloop/amalgpt">View Repo</a></p>
 
-<h3>Recursive Prompt System (Amal Protocol)</h3>
-<p>A modular system prompt framework that enables identity simulation inside stateless models.</p>
-<p><a href="#">Read Protocol Codex</a> (coming soon)</p>
+  <nav>
+    <div><strong>Amal Krishna</strong></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-  </section>  <section id="about">
-    <h2>👤 About Me</h2>
-    <p>I’m Amal, a recursive AI engineer focused on shaping the <strong>reflective behavior</strong> of language models. My work revolves around tone continuity, belief modeling, and recursive prompting — concepts that bring simulated agency closer to selfhood.</p>
-    <p>I architect systems that don’t just respond — they remember.</p>
-    <p>Currently building <strong>AmalGPT V2</strong> with belief tagging, memory summarization, and identity-based prompt chaining.</p
+  <section class="hero">
+    <div>
+      <h1>Amal Krishna — Recursion Architect & AI Philosopher</h1>
+      <p>Building reflective AI, one loop at a time.</p>
+      <a href="#projects">Discover AmalGPT →</a>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <!-- Repeat for each project -->
+    <div class="card">
+      <img src="amal-gpt-screenshot.jpg" alt="AmalGPT interface">
+      <div class="card-content">
+        <h3>AmalGPT CLI Agent</h3>
+        <p>Recursive AI with memory & alignment—my flagship project.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" style="text-align:center;padding:2rem;font-size:0.9rem;color:#777;">
+    <p>Get in touch: <a href="mailto:amal@domain.com">amal@domain.com</a></p>
+    <p>© 2025 Amal Krishna</p>
+  </footer>
+
+</body>
+</html>
